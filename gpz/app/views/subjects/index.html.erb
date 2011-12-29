@@ -1,0 +1,29 @@
+<h1>Списко Предметов</h1>
+
+<table>
+  <tr>
+    <th>Кафедра</th>
+    <th>Дисциплина</th>
+    <th>Преподаватель</th>
+    <th>Группа</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subjects.each do |subject| %>
+  <tr>
+    <td><%= Chair.where('id = ?', subject.chair_id).first.name %></td>
+    <td><%= Discipline.where('id = ?', subject.discipline_id).first.name %></td>
+    <td><%= Teacher.where('id = ?', subject.teacher_id).first.surname %></td>
+    <td><%= Group.where('id = ?', subject.group_id).first.number %></td>
+    <td><%= link_to 'Показать', subject %></td>
+    <td><%= link_to 'Изменить', edit_subject_path(subject) %></td>
+    <td><%= link_to 'Удалить', subject, :confirm => 'Точно?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Новый Предмет', new_subject_path %>

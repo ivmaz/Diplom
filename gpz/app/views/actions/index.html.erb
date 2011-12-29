@@ -1,0 +1,35 @@
+<h1>Список Мероприятий</h1>
+
+<table>
+  <tr>
+    <th>Сетка</th>
+    <th>Аудитория</th>
+    <th>Тип</th>
+    <th>Предмет</th>
+    <th>C</th>
+    <th>По</th>
+    <th>Неделя</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @actions.each do |action| %>
+  <tr>
+    <td><%= action.web_id %></td>
+    <td><%= action.lectroom_id %></td>
+    <td><%= action.type_id %></td>
+    <td><%= action.subject_id %></td>
+    <td><%= action.from %></td>
+    <td><%= action.to %></td>
+    <td><%= action.week %></td>
+    <td><%= link_to 'Показать', action %></td>
+    <td><%= link_to 'Изменить', edit_action_path(action) %></td>
+    <td><%= link_to 'Удалить', action, :confirm => 'Точно?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Новое Мероприятие', new_action_path %>

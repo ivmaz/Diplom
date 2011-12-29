@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Номер:</b>
+  <%= @lectroom.number %>
+</p>
+
+
+<%= link_to 'Изменить', edit_lectroom_path(@lectroom) %> |
+<%= link_to 'Назад', lectrooms_path %>

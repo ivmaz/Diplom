@@ -1,0 +1,2 @@
+module LectroomsHelper
+end

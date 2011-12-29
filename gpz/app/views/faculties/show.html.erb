@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Название:</b>
+  <%= @faculty.name %>
+</p>
+
+
+<%= link_to 'Изменить', edit_faculty_path(@faculty) %> |
+<%= link_to 'Назад', faculties_path %>

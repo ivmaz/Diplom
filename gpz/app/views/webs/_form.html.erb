@@ -1,0 +1,33 @@
+<%= form_for(@web) do |f| %>
+  <% if @web.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@web.errors.count, "error") %> prohibited this web from being saved:</h2>
+
+      <ul>
+      <% @web.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :begintime %><br />
+    <%= f.datetime_select :begintime %>
+  </div>
+  <div class="field">
+    <%= f.label :lenght %><br />
+    <%= f.number_field :lenght %>
+  </div>
+  <div class="field">
+    <%= f.label :pair %><br />
+    <%= f.number_field :pair %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.number_field :day %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Имя:</b>
+  <%= @teacher.name %>
+</p>
+
+<p>
+  <b>Отчество:</b>
+  <%= @teacher.pathname %>
+</p>
+
+<p>
+  <b>Фамилия:</b>
+  <%= @teacher.surname %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_teacher_path(@teacher) %> |
+<%= link_to 'Назад', teachers_path %>

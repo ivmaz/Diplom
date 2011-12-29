@@ -1,0 +1,23 @@
+<h1>Список Аудиторий</h1>
+
+<table>
+  <tr>
+    <th>Номер</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lectrooms.each do |lectroom| %>
+  <tr>
+    <td><%= lectroom.number %></td>
+    <td><%= link_to 'Показать', lectroom %></td>
+    <td><%= link_to 'Изменить', edit_lectroom_path(lectroom) %></td>
+    <td><%= link_to 'Удалить', lectroom, :confirm => 'Точно?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Новая Аудитория', new_lectroom_path %>

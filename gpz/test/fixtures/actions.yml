@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  web_id: 1
+  lectroom_id: 1
+  type_id: 1
+  subject_id: 1
+  from: 2011-12-27
+  to: 2011-12-27
+  week: false
+
+two:
+  web_id: 1
+  lectroom_id: 1
+  type_id: 1
+  subject_id: 1
+  from: 2011-12-27
+  to: 2011-12-27
+  week: false

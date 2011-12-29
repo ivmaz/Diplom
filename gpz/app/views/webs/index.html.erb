@@ -1,0 +1,29 @@
+<h1>Listing webs</h1>
+
+<table>
+  <tr>
+    <th>Begintime</th>
+    <th>Lenght</th>
+    <th>Pair</th>
+    <th>Day</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @webs.each do |web| %>
+  <tr>
+    <td><%= web.begintime %></td>
+    <td><%= web.lenght %></td>
+    <td><%= web.pair %></td>
+    <td><%= web.day %></td>
+    <td><%= link_to 'Show', web %></td>
+    <td><%= link_to 'Edit', edit_web_path(web) %></td>
+    <td><%= link_to 'Destroy', web, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Web', new_web_path %>

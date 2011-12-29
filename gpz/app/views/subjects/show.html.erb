@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Кафедра:</b>
+  <%= @subject.chair_id %>
+</p>
+
+<p>
+  <b>Дисциплина:</b>
+  <%= @subject.discipline_id %>
+</p>
+
+<p>
+  <b>Преподаватель:</b>
+  <%= @subject.teacher_id %>
+</p>
+
+<p>
+  <b>Группа:</b>
+  <%= @subject.group_id %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_subject_path(@subject) %> |
+<%= link_to 'Назад', subjects_path %>

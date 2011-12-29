@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  begintime: 2011-12-27 15:25:21
+  lenght: 1
+  pair: 1
+  day: 1
+
+two:
+  begintime: 2011-12-27 15:25:21
+  lenght: 1
+  pair: 1
+  day: 1

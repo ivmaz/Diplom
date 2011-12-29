@@ -1,0 +1,21 @@
+<%= form_for(@lectroom) do |f| %>
+  <% if @lectroom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lectroom.errors.count, "error") %> prohibited this lectroom from being saved:</h2>
+
+      <ul>
+      <% @lectroom.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

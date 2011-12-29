@@ -1,0 +1,23 @@
+<h1>Список Факультетов</h1>
+
+<table>
+  <tr>
+    <th>Название</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @faculties.each do |faculty| %>
+  <tr>
+    <td><%= faculty.name %></td>
+    <td><%= link_to 'Показать', faculty %></td>
+    <td><%= link_to 'Назад', edit_faculty_path(faculty) %></td>
+    <td><%= link_to 'Удалить', faculty, :confirm => 'Точно?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Новый Факультет', new_faculty_path %>

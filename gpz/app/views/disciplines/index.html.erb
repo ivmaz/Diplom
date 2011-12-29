@@ -1,0 +1,27 @@
+<h1>Список Дисциплин</h1>
+
+<table>
+  <tr>
+    <th>Название</th>
+    <th>Сокращение</th>
+    <th>Кафедра</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @disciplines.each do |discipline| %>
+  <tr>
+    <td><%= discipline.name %></td>
+    <td><%= discipline.reductname %></td>
+    <td><%= discipline.chair_id %></td>
+    <td><%= link_to 'показать', discipline %></td>
+    <td><%= link_to 'редактировать', edit_discipline_path(discipline) %></td>
+    <td><%= link_to 'удалить', discipline, :confirm => 'Точно?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Новая Дисциплина', new_discipline_path %>

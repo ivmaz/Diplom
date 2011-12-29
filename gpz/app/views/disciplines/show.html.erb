@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Название:</b>
+  <%= @discipline.name %>
+</p>
+
+<p>
+  <b>Сокращение:</b>
+  <%= @discipline.reductname %>
+</p>
+
+<p>
+  <b>Кафедра:</b>
+  <%= @discipline.chair_id %>
+</p>
+
+
+<%= link_to 'Изменить', edit_discipline_path(@discipline) %> |
+<%= link_to 'Назад', disciplines_path %>

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Сетка расписания:</b>
+  <%= @action.web_id %>
+</p>
+
+<p>
+  <b>Аудитория:</b>
+  <%= @action.lectroom_id %>
+</p>
+
+<p>
+  <b>Тип:</b>
+  <%= @action.type_id %>
+</p>
+
+<p>
+  <b>Предмет:</b>
+  <%= @action.subject_id %>
+</p>
+
+<p>
+  <b>С:</b>
+  <%= @action.from %>
+</p>
+
+<p>
+  <b>По:</b>
+  <%= @action.to %>
+</p>
+
+<p>
+  <b>Числитель/знаминатель:</b>
+  <%= @action.week %>
+</p>
+
+
+<%= link_to 'Изменить', edit_action_path(@action) %> |
+<%= link_to 'Назад', actions_path %>
